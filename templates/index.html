@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+{% for i in name %}
+<h2>{{i}}. Hello World</h2>
+{% endfor %}
+
+{% if myname %}
+Hello <b>{{myname}}</b>
+{% endif %}
+<h1>Student Login</h1>
+<form action="/login" method="post" autocomplete="off">
+    {% csrf_token %}
+    <input type="text" name="username" required="required" placeholder="Username"/>
+    <input type="password" name="password" required="required" placeholder="Password"/>
+    <button name="submit">SUBMIT</button>
+</form>
+<br/><br/>
+<a href="/posts">VIEW BLOG</a>
+
+{%endblock%}

@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Django App</title>
+
+<style>
+    *{box-sizing: border-box;}
+    body{margin: 0;font-family: Arial, Helvetica, sans-serif;}
+    header{background-color: rgb(61, 202, 207);box-shadow: 0 0 5px #ddd;padding:20px;}
+    header img{width:50px;display: inline-block;vertical-align: middle;margin-right: 10px;}
+    header .sitename{display: inline-block;vertical-align: middle;font:bold 18px Arial}
+    header .sitename span{display: block;font-size: 13px;}
+
+    footer{background-color: #222;margin-top: 30px;padding: 20px 10px;}
+    footer .fblock{display: inline-block;width: 25%;line-height: 1.5;}
+    footer .fblock ul li{color: yellow;}
+    footer .fblock ul li a{color:#fff;text-decoration: none;}
+    footer :where(.copyright,.dev){color: #fff;padding:10px 0;text-align: center;}
+    footer .dev a{color: deepskyblue;}
+
+    footer .clg{padding: 10px 20px;line-height: 1.7;}
+    footer .clg .name{font: bold 18px Arial;color: #fff;}
+    footer .clg .addr{color: #fff;}
+    footer .ftitle{color: dodgerblue;padding-left: 20px;text-decoration: underline;}
+
+    .mainbody{min-height: 300px;padding: 20px;}
+    .error{color: red;font: bold 15px Arial;}
+
+    input{display: block;border: 1px solid #ddd;padding: 10px;border-radius: 5px;margin-bottom: 15px;width: 200px;}
+    button{background-color: #fd355c;color: #fff;padding: 10px 20px;border-radius: 5px;border: none;width: 200px;}
+</style>
+    </head>
+    <body>
+        <header>
+            <img src="{% static 'img/nielogo.png'%}"/>
+            <div class="sitename">The National Institute of Engineering Mysore<span>Autonomous under VTU Belagavi</span></div>
+        </header>
+        <section class="mainbody">
+            {% block content %}
+            {% endblock %}
+        </section>
+
+
+
+
+        <footer>
+            <div class="clg">
+                <div class="name">The National Institute of Engineeing Mysore</div>
+                <div class="addr"><strong>South Campus:</strong> Manandavadi Road, Vidyaranyapuram, Mysore 570008</div>
+                <div class="addr"><strong>North Campus:</strong> Part No. 50, Koorgalli, KRS Road, Mysore, 570018</div>
+            </div>
+            <div class="ftitle">Quick Links</div>
+                
+            <div class="fblock">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Hostel</a></li>
+                    <li><a href="">Campus</a></li>
+                </ul>
+            </div><div class="fblock">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Hostel</a></li>
+                    <li><a href="">Campus</a></li>
+                </ul>
+            </div><div class="fblock">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Hostel</a></li>
+                    <li><a href="">Campus</a></li>
+                </ul>
+            </div><div class="fblock">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Hostel</a></li>
+                    <li><a href="">Campus</a></li>
+                </ul>
+            </div>
+            <div class="copyright">&copy; 2023 - All rights reserved</div>
+            <div class="dev">Developed by: <a href="https://github.com/tahiramaan">Tahir Amaan</a></div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+{% extends 'base.html'%}
+
+{% block content %}
+{% if post%}
+<h1>{{post.title}}</h1>
+<p>Date: {{post.created_on}} &nbsp; By: {{post.author}}</p>
+<div>{{post.content}}</div>
+{% endif %}
+{%endblock%}
